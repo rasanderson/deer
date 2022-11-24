@@ -41,3 +41,4 @@ vignettes/*.pdf
 # Ignore wav and selection tables
 wav/*
 selection_tables/*
+selection_tables_edit/*
