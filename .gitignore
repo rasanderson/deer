@@ -42,3 +42,4 @@ vignettes/*.pdf
 wav/*
 selection_tables/*
 selection_tables_edit/*
+wav_cut/*

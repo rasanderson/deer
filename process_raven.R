@@ -27,3 +27,6 @@ rvn.dat <- imp_raven(all.data = TRUE, path = "selection_tables_edit",
                      warbler.format = TRUE)
 
 head(rvn.dat)
+
+# Cut up the wav files into separate ones based on selection table
+cut_sels(rvn.dat, path = "wav", dest.path = "wav_cut")
