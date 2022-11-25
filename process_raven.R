@@ -17,8 +17,8 @@ sel_tbl <- dplyr::bind_cols(sel_tbl, begin_file, begin_path)
 colnames(sel_tbl)[12] <- "Begin File"
 colnames(sel_tbl)[13] <- "Begin Path"
 
-#readr::write_tsv(sel_tbl, "sel_tbl_check.txt", quote = "none")
-write.table(sel_tbl, "selection_tables_edit/sel_tbl_check.txt", sep='\t', quote = FALSE)
+write.table(sel_tbl, "selection_tables_edit/sel_tbl_check.txt", sep='\t',
+            row.names = FALSE, quote = FALSE)
 
 rvn.dat <- imp_raven(all.data = TRUE, path = "selection_tables_edit")
 
