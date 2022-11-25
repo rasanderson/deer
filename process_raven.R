@@ -29,4 +29,9 @@ rvn.dat <- imp_raven(all.data = TRUE, path = "selection_tables_edit",
 head(rvn.dat)
 
 # Cut up the wav files into separate ones based on selection table
-cut_sels(rvn.dat, path = "wav", dest.path = "wav_cut")
+spp_list <- unique(rvn.dat$Annotation)
+for(spp_name in spp_list){
+  dir.create(paste0("wav_cut/", spp_name), showWarnings = FALSE)
+  one_spp_sel <- rvn.dat[rvn.dat$Annotation == spp_name, ]
+  cut_sels(one_spp_sel, path = "wav", dest.path = paste0("wav_cut/", spp_name))
+}
