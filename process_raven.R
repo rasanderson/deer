@@ -19,6 +19,7 @@ for(sel_file_name in sel_files){
   colnames(sel_tbl)[12] <- "Begin File"
   colnames(sel_tbl)[13] <- "Begin Path"
   
+  print(sel_file_name)
   write.table(sel_tbl, paste0("selection_tables_edit/", sel_file_name), sep='\t',
               row.names = FALSE, quote = FALSE)
 }
